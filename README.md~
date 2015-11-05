@@ -1,0 +1,10 @@
+# Instructions
+This is the code for our Moral Vending Machine. 
+
+## Arduino Setup
+Get the Adafruit GFX and Adafruit ILI9341 libraries.
+
+## Hardware Setup
+* We're using an Adafruit 2.8" TFT Touch Shield for Arduino with Resistive Touch Screen.
+* 
+

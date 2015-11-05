@@ -92,7 +92,7 @@ void checkButtonRed()
       // went from off to on:
       score--;
       question++; 
-      Serial.println("red button pushed");
+      Serial.println("Red button pushed");
       Serial.print("score:  ");
       Serial.println(score);
     }
@@ -188,7 +188,7 @@ void getBall(bool turn){
     tft.setTextSize(3);
     tft.println("I am a Moral Vending Machine");
     tft.setTextSize(2);
-    tft.println("I implore thee,");
+    tft.println("Groop, I implore thee,");
     tft.setTextSize(1);
     tft.println("my foonting turlingdromes.");
     tft.println("And hooptiously drangle me");
@@ -205,7 +205,7 @@ void getBall(bool turn){
     unsigned long start = micros();
     tft.setCursor(0, 0);
     tft.setTextColor(ILI9341_WHITE);  tft.setTextSize(3);
-    tft.println("Are you ready to be moral? Press green button to begin"); 
+    tft.println("Are you ready to make a moral decision? Press green button to begin"); 
     return micros() - start;
  } 
 
@@ -215,7 +215,8 @@ unsigned long question1() {
     unsigned long start = micros();
     tft.setCursor(0, 0);
     tft.setTextColor(ILI9341_GREEN);  tft.setTextSize(3);
-    tft.println("Question 1");
+    tft.println("Prompt 1");
+    tft.println("I am interested in 3D printing’s capacity to compress/fold/overcome/route around/circumvent/skirt/collapse geographic space/spatial boundaries.");
     questionone = 0; 
     }
     //return micros() - start;
@@ -227,7 +228,8 @@ unsigned long question1() {
     unsigned long start = micros();
     tft.setCursor(0, 0);
     tft.setTextColor(ILI9341_WHITE);  tft.setTextSize(3);
-    tft.println("Question 2");
+    tft.println("Prompt 2");
+    tft.println("I am interested in how 3D printing (and desktop manufacturing) disturbs notions of expertise in production.");
     questiontwo = 0; 
    }
     //return micros() - start;
@@ -239,11 +241,15 @@ unsigned long question1() {
     unsigned long start = micros();
     tft.setCursor(0, 0);
     tft.setTextColor(ILI9341_RED);  tft.setTextSize(3);
-    tft.println("Question 3");
+    tft.println("Prompt 3");
+    tft.println("I am interested in how new knowledge practices and epistemic cultures form around 3D printed objects (or practices).");
     //return micros() - start;
     questionthree = 0; 
    }   
  }
+
+// Prompt 4 - I am interested in the capacity of 3D printing to produce customizable goods. 
+// Prompt 5 - I am interested in 3D printing's potential to disrupt/disturb institutional or legal authority. 
   
  unsigned long vending() {
     tft.fillScreen(ILI9341_BLACK);
