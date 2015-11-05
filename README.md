@@ -1,5 +1,5 @@
 # Instructions
-This is the code for the Moral Vending Machine, a project out of the [Critical Making Lab](https://criticalmaking.com) at the University of Toronto.
+This is the code for the Moral Vending Machine, a project out of the [Critical Making Lab](http://criticalmaking.com/) at the University of Toronto.
 
 ## Arduino Setup
 Get the Adafruit GFX and Adafruit ILI9341 libraries.
