@@ -177,26 +177,12 @@ void getBall(bool turn){
     tft.fillScreen(ILI9341_BLACK);
     unsigned long start = micros();
     tft.setCursor(0, 0);
-    tft.setTextColor(ILI9341_WHITE);  tft.setTextSize(1);
-    tft.println("I am a Moral Vending Machine");
-    tft.setTextColor(ILI9341_YELLOW); tft.setTextSize(2);
-    tft.println(1234.56);
     tft.setTextColor(ILI9341_RED);    tft.setTextSize(3);
+    tft.println("");
+    tft.println("");
+    tft.println("");    
+    tft.println("");
     tft.println("I am a Moral Vending Machine");
-    tft.println();
-    tft.setTextColor(ILI9341_GREEN);
-    tft.setTextSize(3);
-    tft.println("I am a Moral Vending Machine");
-    tft.setTextSize(2);
-    tft.println("Groop, I implore thee,");
-    tft.setTextSize(1);
-    tft.println("my foonting turlingdromes.");
-    tft.println("And hooptiously drangle me");
-    tft.println("with crinkly bindlewurdles,");
-    tft.println("Or I will rend thee");
-    tft.println("in the gobberwarts");
-    tft.println("with my blurglecruncheon,");
-    tft.println("see if I don't!");
     return micros() - start;
 }
 
@@ -204,8 +190,10 @@ void getBall(bool turn){
     tft.fillScreen(ILI9341_BLACK);
     unsigned long start = micros();
     tft.setCursor(0, 0);
-    tft.setTextColor(ILI9341_WHITE);  tft.setTextSize(3);
-    tft.println("Are you ready to make a moral decision? Press green button to begin"); 
+    tft.setTextColor(ILI9341_WHITE);  tft.setTextSize(2);
+    tft.println("Are you ready to make a moral decision?"); 
+    tft.println("");
+    tft.println("Press green button to begin!"); 
     return micros() - start;
  } 
 
@@ -214,9 +202,9 @@ unsigned long question1() {
     tft.fillScreen(ILI9341_BLACK);
     unsigned long start = micros();
     tft.setCursor(0, 0);
-    tft.setTextColor(ILI9341_GREEN);  tft.setTextSize(3);
+    tft.setTextColor(ILI9341_GREEN);  tft.setTextSize(2);  tft.setTextWrap(true);
     tft.println("Prompt 1");
-    tft.println("I am interested in 3D printing’s capacity to compress/fold/overcome/route around/circumvent/skirt/collapse geographic space/spatial boundaries.");
+    tft.println("I am interested in 3D printing's capacity to circumvent geographic boundaries.");
     questionone = 0; 
     }
     //return micros() - start;
@@ -229,7 +217,7 @@ unsigned long question1() {
     tft.setCursor(0, 0);
     tft.setTextColor(ILI9341_WHITE);  tft.setTextSize(3);
     tft.println("Prompt 2");
-    tft.println("I am interested in how 3D printing (and desktop manufacturing) disturbs notions of expertise in production.");
+    tft.println("I am interested in how 3D printing unsettles notions of expertise in manufacturing.");
     questiontwo = 0; 
    }
     //return micros() - start;
@@ -242,7 +230,7 @@ unsigned long question1() {
     tft.setCursor(0, 0);
     tft.setTextColor(ILI9341_RED);  tft.setTextSize(3);
     tft.println("Prompt 3");
-    tft.println("I am interested in how new knowledge practices and epistemic cultures form around 3D printed objects (or practices).");
+    tft.println("I am interested in how new knowledge practices and epistemic cultures form around 3D printing.");
     //return micros() - start;
     questionthree = 0; 
    }   
