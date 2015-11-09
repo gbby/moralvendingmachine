@@ -18,7 +18,9 @@ int lastButtonStateGreen = 1;     // previous state of the button
 int question = 0; 
 bool questionone = 1; 
 bool questiontwo = 1; 
-bool questionthree = 1; 
+bool questionthree = 1;
+bool questionfour = 1;
+bool questionfive = 1; 
 
 // For the Adafruit shield, these are the default.
 #define TFT_DC 9
@@ -31,7 +33,7 @@ Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC);
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Starting Moral Vending Machine"); 
+  Serial.println("Starting Blackbox Vending Machine"); 
  pinMode(RedPin, INPUT_PULLUP); //red button
  pinMode(GreenPin, INPUT_PULLUP); //green button 
   tft.begin();
@@ -40,8 +42,7 @@ void setup() {
   delay(3000);
 
 }
-  
-  
+    
 void loop() {
 
 switch (question) {
@@ -62,13 +63,21 @@ switch (question) {
     case 3:  
       question3();
       break;
-    case 4:    
+    case 4:  
+      question4();
+      break;
+    case 5:  
+      question5();
+      break;
+    case 6:    
       vending();
       question = 0;
       score = 0; 
       questionone = 1; 
       questiontwo = 1; 
-      questionthree = 1;  
+      questionthree = 1;
+      questionfour = 1;
+      questionfive = 1;
       break;
   }
 
@@ -182,7 +191,11 @@ void getBall(bool turn){
     tft.println("");
     tft.println("");    
     tft.println("");
-    tft.println("I am a Moral Vending Machine");
+    tft.println("");    
+    tft.println("");
+    tft.println("");    
+    tft.println("");    
+    tft.println("I am a Blackbox Vending Machine");
     return micros() - start;
 }
 
@@ -190,8 +203,15 @@ void getBall(bool turn){
     tft.fillScreen(ILI9341_BLACK);
     unsigned long start = micros();
     tft.setCursor(0, 0);
-    tft.setTextColor(ILI9341_WHITE);  tft.setTextSize(2);
-    tft.println("Are you ready to make a moral decision?"); 
+    tft.setTextColor(ILI9341_GREEN);  tft.setTextSize(2);
+    tft.println("");
+    tft.println("");    
+    tft.println("");
+    tft.println("");    
+    tft.println("");
+    tft.println("");
+    tft.println("");    
+    tft.println("Would you like to make a moral technology?"); 
     tft.println("");
     tft.println("Press green button to begin!"); 
     return micros() - start;
@@ -203,8 +223,19 @@ unsigned long question1() {
     unsigned long start = micros();
     tft.setCursor(0, 0);
     tft.setTextColor(ILI9341_GREEN);  tft.setTextSize(2);  tft.setTextWrap(true);
+    tft.println("");
+    tft.println("");    
+    tft.println("");
+    tft.println("");    
+    tft.println("");
+    tft.println("");
+    tft.println("");    
     tft.println("Prompt 1");
-    tft.println("I am interested in 3D printing's capacity to circumvent geographic boundaries.");
+    tft.println("I am interested in 3D     printing's capacity to    circumvent geographic     boundaries.");
+    tft.println("");
+    tft.println("Press Green for Yes");
+    tft.setTextColor(ILI9341_RED); 
+    tft.println("or Red for No");
     questionone = 0; 
     }
     //return micros() - start;
@@ -215,9 +246,20 @@ unsigned long question1() {
     tft.fillScreen(ILI9341_BLACK);
     unsigned long start = micros();
     tft.setCursor(0, 0);
-    tft.setTextColor(ILI9341_WHITE);  tft.setTextSize(3);
+    tft.setTextColor(ILI9341_GREEN);  tft.setTextSize(2);
+    tft.println("");
+    tft.println("");    
+    tft.println("");
+    tft.println("");    
+    tft.println("");
+    tft.println("");
+    tft.println("");        
     tft.println("Prompt 2");
     tft.println("I am interested in how 3D printing unsettles notions of expertise in manufacturing.");
+    tft.println("");
+    tft.println("Press Green for Yes");
+    tft.setTextColor(ILI9341_RED); 
+    tft.println("or Red for No");    
     questiontwo = 0; 
    }
     //return micros() - start;
@@ -228,22 +270,85 @@ unsigned long question1() {
     tft.fillScreen(ILI9341_BLACK);
     unsigned long start = micros();
     tft.setCursor(0, 0);
-    tft.setTextColor(ILI9341_RED);  tft.setTextSize(3);
+    tft.setTextColor(ILI9341_GREEN);  tft.setTextSize(2);
+    tft.println("");
+    tft.println("");    
+    tft.println("");
+    tft.println("");    
+    tft.println("");
+    tft.println("");
+    tft.println("");  
     tft.println("Prompt 3");
     tft.println("I am interested in how new knowledge practices and epistemic cultures form around 3D printing.");
+    tft.println("");
+    tft.println("Press Green for Yes");
+    tft.setTextColor(ILI9341_RED); 
+    tft.println("or Red for No");    
     //return micros() - start;
     questionthree = 0; 
    }   
  }
 
-// Prompt 4 - I am interested in the capacity of 3D printing to produce customizable goods. 
-// Prompt 5 - I am interested in 3D printing's potential to disrupt/disturb institutional or legal authority. 
-  
+ unsigned long question4() {
+   if (questionfour) {
+    tft.fillScreen(ILI9341_BLACK);
+    unsigned long start = micros();
+    tft.setCursor(0, 0);
+    tft.setTextColor(ILI9341_GREEN);  tft.setTextSize(2);
+    tft.println("");
+    tft.println("");    
+    tft.println("");
+    tft.println("");    
+    tft.println("");
+    tft.println("");
+    tft.println("");  
+    tft.println("Prompt 4");
+    tft.println("I am interested in the capacity of 3D printing to produce customizable goods.");
+    tft.println("");
+    tft.println("Press Green for Yes");
+    tft.setTextColor(ILI9341_RED); 
+    tft.println("or Red for No");    
+    questionfour = 0; 
+   }
+    //return micros() - start;
+ }
+
+ unsigned long question5() {
+   if (questionfive) {
+    tft.fillScreen(ILI9341_BLACK);
+    unsigned long start = micros();
+    tft.setCursor(0, 0);
+    tft.setTextColor(ILI9341_GREEN);  tft.setTextSize(2);
+    tft.println("");
+    tft.println("");    
+    tft.println("");
+    tft.println("");    
+    tft.println("");
+    tft.println("");
+    tft.println("");  
+    tft.println("Prompt 5");
+    tft.println("I am interested in 3D printing's potential to disrupt/disturb institutional or legal authority.");
+    tft.println("");
+    tft.println("Press Green for Yes");
+    tft.setTextColor(ILI9341_RED); 
+    tft.println("or Red for No");    
+    questionfive = 0; 
+   }
+    //return micros() - start;
+ }
+
  unsigned long vending() {
     tft.fillScreen(ILI9341_BLACK);
     unsigned long start = micros();
     tft.setCursor(0, 0);
-    tft.setTextColor(ILI9341_WHITE);  tft.setTextSize(5);
+    tft.setTextColor(ILI9341_GREEN);  tft.setTextSize(5);
+    tft.println("");
+    tft.println("");    
+    tft.println("");
+    tft.println("");    
+    tft.println("");
+    tft.println("");
+    tft.println(""); 
     tft.println("vending");
     
     if (score>0) {
