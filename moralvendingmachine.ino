@@ -216,6 +216,10 @@ void getBall(bool turn){
     tft.println("Press green button to begin!"); 
     return micros() - start;
  } 
+ 
+ // get rid of moral and replace with black box
+ // get rid of 3D printing language and replace with more direct questions
+ // e.g. “I am worried about 3D printing being used to proliferate guns”
 
 unsigned long question1() {
     if (questionone) {
@@ -232,6 +236,7 @@ unsigned long question1() {
     tft.println("");    
     tft.println("Prompt 1");
     tft.println("I am interested in 3D     printing's capacity to    circumvent geographic     boundaries.");
+// i am interested in the circumvention of geographic boundaries    
     tft.println("");
     tft.println("Press Green for Yes");
     tft.setTextColor(ILI9341_RED); 
@@ -256,6 +261,7 @@ unsigned long question1() {
     tft.println("");        
     tft.println("Prompt 2");
     tft.println("I am interested in how 3D printing unsettles notions of expertise in manufacturing.");
+// i am interested in the unsettling of manufacturing expertise    
     tft.println("");
     tft.println("Press Green for Yes");
     tft.setTextColor(ILI9341_RED); 
@@ -280,6 +286,7 @@ unsigned long question1() {
     tft.println("");  
     tft.println("Prompt 3");
     tft.println("I am interested in how new knowledge practices and epistemic cultures form around 3D printing.");
+// i am interested in new knowledge practices and epistemic cultures    
     tft.println("");
     tft.println("Press Green for Yes");
     tft.setTextColor(ILI9341_RED); 
@@ -304,6 +311,7 @@ unsigned long question1() {
     tft.println("");  
     tft.println("Prompt 4");
     tft.println("I am interested in the capacity of 3D printing to produce customizable goods.");
+// i am interested in customizable production and manufacturing    
     tft.println("");
     tft.println("Press Green for Yes");
     tft.setTextColor(ILI9341_RED); 
@@ -328,6 +336,7 @@ unsigned long question1() {
     tft.println("");  
     tft.println("Prompt 5");
     tft.println("I am interested in 3D printing's potential to disrupt/disturb institutional or legal authority.");
+// i am interested in disturbing institutional or legal authority    
     tft.println("");
     tft.println("Press Green for Yes");
     tft.setTextColor(ILI9341_RED); 
@@ -354,7 +363,9 @@ unsigned long question1() {
     if (score>0) {
     Serial.println("vending leg");   
     getBall(0); 
-    }else {
+    }
+// what about adding some screen lines as well as serial
+    else {
    Serial.println("vending gun");    
    getBall(1);
     } 
